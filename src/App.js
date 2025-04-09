@@ -1,23 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import MainContent from './components/MainContent';
-import { initializeAnimations } from './animations';
-import ShareButtons from './components/ShareButtons';
+import ShareButtons from './components/SpeedDial';
 
 function App() {
-  useEffect(() => {
-    initializeAnimations();
-  }, []);
-  
   return (
     <div className="App">
       <Navbar />
       <main className="App-content">
-  <MainContent />
-  <div className="share-buttons-container"><ShareButtons /></div>
-</main>
+        <MainContent />
+        <div className="share-buttons-container">
+          <ShareButtons />
+          sh
+        </div>
+      </main>
       <Footer />
     </div>
   );

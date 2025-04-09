@@ -1,0 +1,91 @@
+/* Container for the share buttons */
+.share-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Main "CREATE" button */
+.share {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background: #8bc34a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.share:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Child buttons container */
+.child-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Hidden by default */
+}
+
+.child-buttons.open {
+  display: flex; /* Show when open */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+/* Individual child buttons */
+.child-buttons .one,
+.child-buttons .two,
+.child-buttons .three,
+.child-buttons .four,
+.child-buttons .five {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* Start hidden */
+}
+
+.child-buttons.open .one {
+  transform: translate(-140px, -140px);
+  opacity: 1;
+}
+
+.child-buttons.open .two {
+  transform: translate(140px, -140px);
+  opacity: 1;
+}
+
+.child-buttons.open .three {
+  transform: translate(-140px, 140px);
+  opacity: 1;
+}
+
+.child-buttons.open .four {
+  transform: translate(140px, 140px);
+  opacity: 1;
+}
+
+.child-buttons.open .five {
+  transform: translate(0, 200px);
+  opacity: 1;
+}
